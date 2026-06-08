@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+  body {
+    background-color: #071827;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: #2ECC71;
+    color: #071827;
+  }
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D2235;
+}
+::-webkit-scrollbar-thumb {
+  background: #2ECC71;
+  border-radius: 12px;
+}
+
+/* glassmorphism utility */
+.glass-card {
+  background: rgba(13, 34, 53, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+/* glow effect on cards */
+.glow-hover:hover {
+  box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
+  border-color: #2ECC71;
+  transition: all 0.3s ease;
+}
