@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Download, Mail, FolderGit2, Sparkles } from 'lucide-react';
 
 const roles = [
@@ -7,11 +7,19 @@ const roles = [
   "MATLAB Programmer", "Co-Founder of Ideal Technology", "WordPress Developer", "JavaScript Developer"
 ];
 
+const badgeTitles = [
+  "AI Engineer & Founder",
+  "Co-Founder of Ideal Technology",
+  "Data Science Innovator",
+  "Backend Systems Architect"
+];
+
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
+  const [currentBadge, setCurrentBadge] = useState(0);
   const typingSpeed = 120;
 
   useEffect(() => {
@@ -31,6 +39,13 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [displayText, isDeleting, currentRole, loopNum]);
 
+  useEffect(() => {
+    const badgeTimer = setInterval(() => {
+      setCurrentBadge((prev) => (prev + 1) % badgeTitles.length);
+    }, 3500);
+    return () => clearInterval(badgeTimer);
+  }, []);
+
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -39,7 +54,21 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center pt-24 pb-16 relative overflow-hidden">
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-          <div className="inline-block px-4 py-1 rounded-full border border-accent/30 bg-accent/10 text-accent text-sm mb-6">✦ AI Engineer & Founder</div>
+          <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full border border-accent/30 bg-accent/10 text-accent text-sm mb-6 h-8 overflow-hidden">
+            <span className="text-accent animate-pulse">✦</span>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={currentBadge}
+                initial={{ y: 12, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -12, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="inline-block font-medium"
+              >
+                {badgeTitles[currentBadge]}
+              </motion.span>
+            </AnimatePresence>
+          </div>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-4">Victor Clement <span className="text-accent">Udoma</span></h1>
           <div className="h-16 mb-6">
             <p className="text-xl md:text-2xl text-textMuted"><span className="text-accent font-semibold">&gt; </span>{displayText}<span className="animate-pulse">_</span></p>
