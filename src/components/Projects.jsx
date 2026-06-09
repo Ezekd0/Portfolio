@@ -10,12 +10,13 @@ const projectsData = [
   { id:4, title:'Automated ML Pipeline', desc:'End-to-end model training automation', tech:['Python','Scikit-learn','Airflow'], category:'Automation', demo:'#', github:'#' },
   { id:5, title:'Portfolio AI Agent', desc:'Interactive AI assistant integration', tech:['React','LangChain'], category:'AI', demo:'#', github:'#' },
   { id:6, title:'Scientific MATLAB Suite', desc:'Numerical computing tool for engineering', tech:['MATLAB','Simulink'], category:'Data Science', demo:'#', github:'#' },
+  { id:7, title:'Ibom Blockchain Xperience', desc:'Official platform for West Africa\'s largest blockchain movement, facilitating community events and Web3 ecosystem integration.', tech:['React','Tailwind CSS','JavaScript','Web3'], category:'Web3', demo:'https://www.ibomblockchain.com/', github:'#' },
 ];
 
 const Projects = () => {
   const { activeFilter, setActiveFilter, projectsRef } = useContext(ProjectFilterContext);
   const filtered = useMemo(() => activeFilter === 'All' ? projectsData : projectsData.filter(p => p.category === activeFilter), [activeFilter]);
-  const filters = ['All', 'AI', 'Backend', 'Data Science', 'Automation'];
+  const filters = ['All', 'AI', 'Backend', 'Data Science', 'Automation', 'Web3'];
 
   return (
     <section id="projects" ref={projectsRef} className="py-20 bg-navy">
@@ -32,7 +33,14 @@ const Projects = () => {
                 <h3 className="text-xl font-bold mb-2">{proj.title}</h3>
                 <p className="text-textMuted text-sm mb-3">{proj.desc}</p>
                 <div className="flex flex-wrap gap-2 mb-4">{proj.tech.map(t => <span key={t} className="text-xs bg-navy px-2 py-1 rounded-full text-accent">{t}</span>)}</div>
-                <div className="flex gap-4"><button className="flex items-center gap-1 text-accent text-sm"><ExternalLink size={14} /> Live Demo</button><button className="flex items-center gap-1 text-textMuted text-sm"><Github size={14} /> GitHub</button></div>
+                <div className="flex gap-4">
+                  <a href={proj.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-accent text-sm hover:underline">
+                    <ExternalLink size={14} /> Live Demo
+                  </a>
+                  <a href={proj.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-textMuted text-sm hover:underline">
+                    <Github size={14} /> GitHub
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
