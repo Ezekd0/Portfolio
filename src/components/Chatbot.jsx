@@ -11,6 +11,18 @@ const Chatbot = () => {
 
   const getReply = (msg) => {
     const lower = msg.toLowerCase();
+    if (lower.startsWith('hi') || lower.startsWith('hello') || lower.startsWith('hey') || lower.includes('greetings') || lower.includes('morning') || lower.includes('afternoon')) {
+      return "Hello! I'm IDEAL AI. How can I help you learn about Victor's projects, background at BYU/UniUyo, certifications, or Ideal Technology today?";
+    }
+    if (lower.includes('education') || lower.includes('study') || lower.includes('byu') || lower.includes('university of uyo') || lower.includes('school')) {
+      return "Victor is an online student of BYU studying Software Engineering, and also a Data Science student at the University of Uyo, based in Uyo, Nigeria.";
+    }
+    if (lower.includes('certificate') || lower.includes('cert') || lower.includes('coursera')) {
+      return "Victor has certified credentials in UI/UX, Python, and Automation with Coursera.";
+    }
+    if (lower.includes('gdg') || lower.includes('google developer group')) {
+      return "Victor is an active member of Google Developer Groups (GDG) and a member of the largest blockchain movement in West Africa, the Ibom Blockchain Xperience.";
+    }
     if (lower.includes('who is victor')) {
       scrollToAbout();
       return "Victor Clement Udoma is a Python Dev, Backend Engineer, AI Bot Developer, Data Science student & Co-Founder of Ideal Technology. Scroll to about!";
