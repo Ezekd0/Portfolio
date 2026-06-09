@@ -1,6 +1,6 @@
-import { useContext, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github, Code } from 'lucide-react';
+import { useContext, useMemo, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ExternalLink, Github, Code, X, Sparkles } from 'lucide-react';
 import { ProjectFilterContext } from '../App';
 
 const projectsData = [
@@ -18,6 +18,9 @@ const Projects = () => {
   const filtered = useMemo(() => activeFilter === 'All' ? projectsData : projectsData.filter(p => p.category === activeFilter), [activeFilter]);
   const filters = ['All', 'AI', 'Backend', 'Data Science', 'Automation', 'Web3'];
 
+  const [previewUrl, setPreviewUrl] = useState(null);
+  const [previewTitle, setPreviewTitle] = useState('');
+
   return (
     <section id="projects" ref={projectsRef} className="py-20 bg-navy">
       <div className="container mx-auto px-6">
@@ -27,25 +30,92 @@ const Projects = () => {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
           {filtered.map(proj => (
-            <motion.div whileHover={{ y: -6 }} key={proj.id} className="bg-secondary rounded-xl overflow-hidden border border-accent/20 hover:border-accent/70 transition-all">
-              <div className="h-40 bg-gradient-to-br from-accent/20 to-navy flex items-center justify-center"><Code size={48} className="text-accent/60" /></div>
-              <div className="p-5">
-                <h3 className="text-xl font-bold mb-2">{proj.title}</h3>
-                <p className="text-textMuted text-sm mb-3">{proj.desc}</p>
-                <div className="flex flex-wrap gap-2 mb-4">{proj.tech.map(t => <span key={t} className="text-xs bg-navy px-2 py-1 rounded-full text-accent">{t}</span>)}</div>
-                <div className="flex gap-4">
-                  <a href={proj.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-accent text-sm hover:underline">
-                    <ExternalLink size={14} /> Live Demo
-                  </a>
-                  <a href={proj.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-textMuted text-sm hover:underline">
-                    <Github size={14} /> GitHub
-                  </a>
+            <motion.div whileHover={{ y: -6 }} key={proj.id} className="bg-secondary rounded-xl overflow-hidden border border-accent/20 hover:border-accent/70 transition-all flex flex-col justify-between">
+              <div>
+                <div className="h-40 bg-gradient-to-br from-accent/20 to-navy flex items-center justify-center"><Code size={48} className="text-accent/60" /></div>
+                <div className="p-5">
+                  <h3 className="text-xl font-bold mb-2">{proj.title}</h3>
+                  <p className="text-textMuted text-sm mb-3">{proj.desc}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">{proj.tech.map(t => <span key={t} className="text-xs bg-navy px-2 py-1 rounded-full text-accent">{t}</span>)}</div>
+                </div>
+              </div>
+              <div className="p-5 pt-0 border-t border-navy/40 mt-auto">
+                <div className="flex items-center justify-between w-full mt-4">
+                  <div className="flex gap-4">
+                    {proj.demo !== '#' ? (
+                      <button 
+                        onClick={() => { setPreviewUrl(proj.demo); setPreviewTitle(proj.title); }}
+                        className="flex items-center gap-1 text-accent text-sm hover:underline cursor-pointer font-semibold"
+                      >
+                        <Sparkles size={14} /> Preview
+                      </button>
+                    ) : (
+                      <span className="text-textMuted text-sm italic">Backend project</span>
+                    )}
+                    <a href={proj.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-textMuted text-sm hover:underline">
+                      <Github size={14} /> Repo
+                    </a>
+                  </div>
+                  {proj.demo !== '#' && (
+                    <a href={proj.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-textMuted text-xs hover:text-accent transition">
+                      Launch <ExternalLink size={12} />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Preview Modal Overlay */}
+      <AnimatePresence>
+        {previewUrl && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-navy/85 backdrop-blur-md z-50 flex items-center justify-center p-4 md:p-6"
+            onClick={() => setPreviewUrl(null)}
+          >
+            <motion.div 
+              initial={{ scale: 0.95, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.95, y: 20 }}
+              className="bg-secondary w-full max-w-5xl h-[80vh] rounded-2xl border border-accent/30 flex flex-col overflow-hidden shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="flex justify-between items-center px-6 py-4 border-b border-accent/20">
+                <span className="font-bold text-accent">{previewTitle}</span>
+                <div className="flex items-center gap-4">
+                  <a 
+                    href={previewUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-xs bg-accent/10 border border-accent/30 text-accent px-3 py-1 rounded-md hover:bg-accent hover:text-navy transition flex items-center gap-1"
+                  >
+                    <ExternalLink size={12} /> Open in new tab
+                  </a>
+                  <button onClick={() => setPreviewUrl(null)} className="text-textMuted hover:text-white transition cursor-pointer">
+                    <X size={20} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Viewport */}
+              <div className="flex-1 bg-white relative">
+                <iframe 
+                  src={previewUrl} 
+                  title={previewTitle} 
+                  className="w-full h-full border-0" 
+                  sandbox="allow-scripts allow-same-origin allow-popups"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
