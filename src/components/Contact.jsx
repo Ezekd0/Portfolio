@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Github, Linkedin, MessageCircle, Send } from 'lucide-react';
+import { Mail, Phone, Github, Linkedin, MessageCircle, Send } from 'lucide-react';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
@@ -18,10 +18,19 @@ const Contact = () => {
                 <div className="p-3 bg-accent/10 rounded-full">
                   <Mail className="text-accent" />
                 </div>
-                <div>victor@idealtech.com</div>
+                <div>victorclementu222@gmail.com</div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-accent/10 rounded-full">
+                  <Phone className="text-accent" />
+                </div>
+                <div className="flex flex-col">
+                  <span>08107989032</span>
+                  <span>07065888167</span>
+                </div>
               </div>
               <div className="flex gap-5 mt-6">
-                <a href="#" aria-label="GitHub profile" className="hover:text-accent transition">
+                <a href="https://github.com/Ezekd0" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="hover:text-accent transition">
                   <Github />
                 </a>
                 <a href="#" aria-label="LinkedIn profile" className="hover:text-accent transition">

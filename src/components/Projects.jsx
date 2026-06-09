@@ -4,13 +4,13 @@ import { ExternalLink, Github, Code } from 'lucide-react';
 import { ProjectFilterContext } from '../App';
 
 const projectsData = [
-  { id:1, title:'AI Customer Support Bot', desc:'Intelligent chatbot with NLP, sentiment analysis', tech:['Python','FastAPI','OpenAI'], category:'AI', demo:'#', github:'#' },
-  { id:2, title:'Analytics Dashboard', desc:'Real-time data visualization for business metrics', tech:['Pandas','React','D3'], category:'Data Science', demo:'#', github:'#' },
-  { id:3, title:'Ecom Backend API', desc:'Scalable REST API with authentication and rate limiting', tech:['Django','PostgreSQL','Redis'], category:'Backend', demo:'#', github:'#' },
-  { id:4, title:'Automated ML Pipeline', desc:'End-to-end model training automation', tech:['Python','Scikit-learn','Airflow'], category:'Automation', demo:'#', github:'#' },
-  { id:5, title:'Portfolio AI Agent', desc:'Interactive AI assistant integration', tech:['React','LangChain'], category:'AI', demo:'#', github:'#' },
-  { id:6, title:'Scientific MATLAB Suite', desc:'Numerical computing tool for engineering', tech:['MATLAB','Simulink'], category:'Data Science', demo:'#', github:'#' },
-  { id:7, title:'Ibom Blockchain Xperience', desc:'Official platform for West Africa\'s largest blockchain movement, facilitating community events and Web3 ecosystem integration.', tech:['React','Tailwind CSS','JavaScript','Web3'], category:'Web3', demo:'https://www.ibomblockchain.com/', github:'#' },
+  { id:1, title:'AI Customer Support Bot', desc:'Intelligent chatbot with NLP, sentiment analysis', tech:['Python','FastAPI','OpenAI'], category:'AI', demo:'#', github:'https://github.com/Ezekd0' },
+  { id:2, title:'Analytics Dashboard', desc:'Real-time data visualization for business metrics', tech:['Pandas','React','D3'], category:'Data Science', demo:'#', github:'https://github.com/Ezekd0' },
+  { id:3, title:'Ecom Backend API', desc:'Scalable REST API with authentication and rate limiting', tech:['Django','PostgreSQL','Redis'], category:'Backend', demo:'#', github:'https://github.com/Ezekd0' },
+  { id:4, title:'Automated ML Pipeline', desc:'End-to-end model training automation', tech:['Python','Scikit-learn','Airflow'], category:'Automation', demo:'#', github:'https://github.com/Ezekd0' },
+  { id:5, title:'Portfolio AI Agent', desc:'Interactive AI assistant integration', tech:['React','LangChain'], category:'AI', demo:'#', github:'https://github.com/Ezekd0' },
+  { id:6, title:'Scientific MATLAB Suite', desc:'Numerical computing tool for engineering', tech:['MATLAB','Simulink'], category:'Data Science', demo:'#', github:'https://github.com/Ezekd0' },
+  { id:7, title:'Ibom Blockchain Xperience', desc:'Official platform for West Africa\'s largest blockchain movement, facilitating community events and Web3 ecosystem integration.', tech:['React','Tailwind CSS','JavaScript','Web3'], category:'Web3', demo:'https://www.ibomblockchain.com/', github:'https://github.com/Ezekd0' },
 ];
 
 const Projects = () => {
