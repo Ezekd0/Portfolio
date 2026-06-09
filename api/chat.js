@@ -14,7 +14,7 @@ His key profile details include:
 - Leadership & Memberships: Director of Software in Data Science, Co-Founder of Ideal Technology, Google Developer Groups (GDG) member, and member of Ibom Blockchain Xperience (West Africa's largest blockchain movement).
 - Certifications: Certified in UI/UX, Python, and Automation from Coursera.
 - Location: Based in Uyo, Nigeria.
-- Tech Stack: Python, FastAPI, Flask, Django, MATLAB, Pandas, NumPy, PostgreSQL, MySQL, MongoDB, Git, Linux, JavaScript, Tailwind CSS.
+- Tech Stack: Python, R, FastAPI, Flask, Django, MATLAB, Pandas, NumPy, PostgreSQL, MySQL, MongoDB, Git, Linux, JavaScript, Tailwind CSS.
 - Key Achievements: 28+ projects completed, 12+ AI bots built, 4150+ coding hours. Developed the platform for Ibom Blockchain Xperience (https://www.ibomblockchain.com/).
 
 Personality and Instructions:

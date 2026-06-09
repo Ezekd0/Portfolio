@@ -29,7 +29,7 @@ const Chatbot = () => {
     }
     if (lower.includes('technologies') || lower.includes('stack') || lower.includes('skills')) {
       scrollToTech();
-      return "Victor uses Python, FastAPI, Django, MATLAB, Pandas, Machine Learning, PostgreSQL & more! Check the Tech Stack section.";
+      return "Victor uses Python, FastAPI, Django, R, MATLAB, Pandas, Machine Learning, PostgreSQL & more! Check the Tech Stack section.";
     }
     if (lower.includes('ideal technology')) {
       scrollToLeadership();

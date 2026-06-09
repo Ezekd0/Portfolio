@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const skillset = ['Python', 'FastAPI', 'AI Development', 'MATLAB', 'JavaScript', 'WordPress', 'Data Science', 'Machine Learning', 'Backend Architecture'];
+const skillset = ['Python', 'FastAPI', 'AI Development', 'MATLAB', 'R Programming', 'JavaScript', 'WordPress', 'Data Science', 'Machine Learning', 'Backend Architecture'];
 
 const DynamicSkills = () => {
   const [index, setIndex] = useState(0);

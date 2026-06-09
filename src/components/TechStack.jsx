@@ -3,8 +3,8 @@ import { useInView } from 'react-intersection-observer';
 
 const techCategories = [
   { name: 'Backend', skills: ['Python', 'FastAPI', 'Flask', 'Django'] },
-  { name: 'Data Science', skills: ['Pandas', 'NumPy', 'Machine Learning', 'Data Analytics'] },
-  { name: 'Programming', skills: ['JavaScript', 'MATLAB', 'HTML', 'CSS'] },
+  { name: 'Data Science', skills: ['Pandas', 'NumPy', 'R', 'Machine Learning', 'Data Analytics'] },
+  { name: 'Programming', skills: ['JavaScript', 'MATLAB', 'R', 'HTML', 'CSS'] },
   { name: 'Database', skills: ['PostgreSQL', 'MySQL', 'MongoDB'] },
   { name: 'Tools', skills: ['Git', 'GitHub', 'Linux', 'Postman'] },
 ];
