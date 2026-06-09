@@ -81,7 +81,7 @@ const Hero = () => {
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="relative flex justify-center">
           <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-accent/40 shadow-2xl shadow-accent/20">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Victor Clement Udoma" className="w-full h-full object-cover" />
+            <img src="/victor.jpg" alt="Victor Clement Udoma" className="w-full h-full object-cover" />
           </div>
           <div className="absolute -bottom-6 -right-6 bg-accent/20 backdrop-blur-md rounded-full p-4 border border-accent/50"><Sparkles className="text-accent" size={28} /></div>
         </motion.div>
