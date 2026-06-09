@@ -11,7 +11,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ['Home', 'About', 'Leadership', 'Tech', 'Projects', 'Contact'];
+  const navLinks = ['Home', 'About', 'Experience', 'Leadership', 'Tech', 'Projects', 'Contact'];
 
   const scrollTo = (id) => {
     const el = document.getElementById(id.toLowerCase());

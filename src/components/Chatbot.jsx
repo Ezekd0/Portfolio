@@ -7,7 +7,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([{ sender: 'ai', text: "Hi! I'm IDEAL AI. Ask me about Victor, projects, technologies, or Ideal Technology!" }]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  const { setActiveFilter, scrollToProjects, scrollToContact, scrollToAbout, scrollToTech, scrollToLeadership } = useContext(ProjectFilterContext);
+  const { setActiveFilter, scrollToProjects, scrollToContact, scrollToAbout, scrollToTech, scrollToLeadership, scrollToExperience } = useContext(ProjectFilterContext);
 
   const getReply = (msg) => {
     const lower = msg.toLowerCase();
@@ -26,6 +26,10 @@ const Chatbot = () => {
     if (lower.includes('who is victor')) {
       scrollToAbout();
       return "Victor Clement Udoma is a Python Dev, Backend Engineer, AI Bot Developer, Data Science student & Co-Founder of Ideal Technology. Scroll to about!";
+    }
+    if (lower.includes('experience') || lower.includes('work') || lower.includes('job') || lower.includes('career') || lower.includes('aptech') || lower.includes('freelance') || lower.includes('brain')) {
+      scrollToExperience();
+      return "Victor worked as a Software Engineer at Brain, does freelance backend & AI integration, and interned with Aptech. Check out the Experience timeline, I've scrolled there for you!";
     }
     if (lower.includes('technologies') || lower.includes('stack') || lower.includes('skills')) {
       scrollToTech();

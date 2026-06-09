@@ -6,6 +6,7 @@ import MouseGlow from './components/MouseGlow';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Experience from './components/Experience';
 import Leadership from './components/Leadership';
 import TechStack from './components/TechStack';
 import DynamicSkills from './components/DynamicSkills';
@@ -25,6 +26,7 @@ function App() {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
   const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
   const techStackRef = useRef(null);
   const leadershipRef = useRef(null);
 
@@ -40,6 +42,7 @@ function App() {
       scrollToProjects: () => scrollToSection(projectsRef), 
       scrollToContact: () => scrollToSection(contactRef), 
       scrollToAbout: () => scrollToSection(aboutRef), 
+      scrollToExperience: () => scrollToSection(experienceRef), 
       scrollToTech: () => scrollToSection(techStackRef), 
       scrollToLeadership: () => scrollToSection(leadershipRef) 
     }}>
@@ -50,6 +53,7 @@ function App() {
         <main>
           <Hero />
           <div ref={aboutRef}><About /></div>
+          <div ref={experienceRef}><Experience /></div>
           <div ref={leadershipRef}><Leadership /></div>
           <div ref={techStackRef}><TechStack /></div>
           <DynamicSkills />
