@@ -54,6 +54,11 @@ const Chatbot = () => {
       scrollToProjects();
       return "Showing Web3 and blockchain projects, including the Ibom Blockchain Xperience! Check the projects section.";
     }
+    if (lower.includes('thought starters') || lower.includes('dailystarters') || lower.includes('devotion') || lower.includes('bible')) {
+      setActiveFilter('Backend');
+      scrollToProjects();
+      return "Showing the Thought Starters devotion platform! Check the projects section.";
+    }
     if (lower.includes('resume')) {
       return "You can download Victor's resume from the Hero section (Download Resume button).";
     }

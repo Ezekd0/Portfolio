@@ -75,7 +75,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-wrap gap-4 mt-4">
             <button onClick={() => scrollToSection('projects')} className="bg-accent text-navy px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-accent/30 transition"><FolderGit2 size={20} /> View Projects</button>
-            <button className="border border-accent text-accent px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-accent/10 transition"><Download size={20} /> Download Resume</button>
+            <a href="/resume.pdf" download="Victor_Clement_Udoma_Resume.pdf" className="border border-accent text-accent px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-accent/10 transition"><Download size={20} /> Download Resume</a>
             <button onClick={() => scrollToSection('contact')} className="bg-secondary/60 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:border-accent/50 transition"><Mail size={20} /> Contact Me</button>
           </div>
         </motion.div>

@@ -19,7 +19,7 @@ His key profile details include:
 - Certifications: Certified in UI/UX, Python, and Automation from Coursera.
 - Location: Based in Uyo, Nigeria.
 - Tech Stack: Python, R, FastAPI, Flask, Django, MATLAB, Pandas, NumPy, PostgreSQL, MySQL, MongoDB, Git, Linux, JavaScript, Tailwind CSS.
-- Key Achievements: 28+ projects completed, 12+ AI bots built, 4150+ coding hours. Developed the platform for Ibom Blockchain Xperience (https://www.ibomblockchain.com/).
+- Key Achievements: 28+ projects completed, 12+ AI bots built, 4150+ coding hours. Developed the platforms for Ibom Blockchain Xperience (https://www.ibomblockchain.com/) and Thought Starters (https://dailystarters.org/).
 - GitHub: https://github.com/Ezekd0
 - Phone: 08107989032, 07065888167
 
