@@ -10,8 +10,8 @@ const projectsData = [
   { id:4, title:'Automated ML Pipeline', desc:'End-to-end model training automation', tech:['Python','Scikit-learn','Airflow'], category:'Automation', demo:'#', github:'https://github.com/Ezekd0' },
   { id:5, title:'Portfolio AI Agent', desc:'Interactive AI assistant integration', tech:['React','LangChain'], category:'AI', demo:'#', github:'https://github.com/Ezekd0' },
   { id:6, title:'Scientific MATLAB Suite', desc:'Numerical computing tool for engineering', tech:['MATLAB','Simulink'], category:'Data Science', demo:'#', github:'https://github.com/Ezekd0' },
-  { id:7, title:'Ibom Blockchain Xperience', desc:'Official platform for West Africa\'s largest blockchain movement, facilitating community events and Web3 ecosystem integration.', tech:['React','Tailwind CSS','JavaScript','Web3'], category:'Web3', demo:'https://www.ibomblockchain.com/', github:'https://github.com/Ezekd0' },
-  { id:8, title:'Thought Starters', desc:'A daily devotion and Christian reflection platform offering morning spiritual tonics, daily scriptures, and faith teachings.', tech:['React','Tailwind CSS','JavaScript','Vite'], category:'Backend', demo:'https://www.dailystarters.org/', github:'https://github.com/Ezekd0' },
+  { id:7, title:'Ibom Blockchain Xperience', desc:'Official platform for West Africa\'s largest blockchain movement, facilitating community events and Web3 ecosystem integration.', tech:['React','Tailwind CSS','JavaScript','Web3'], category:'Web3', demo:'https://www.ibomblockchain.com/', github:'https://github.com/Ezekd0', image:'/ibomblockchain.png' },
+  { id:8, title:'Thought Starters', desc:'A daily devotion and Christian reflection platform offering morning spiritual tonics, daily scriptures, and faith teachings.', tech:['React','Tailwind CSS','JavaScript','Vite'], category:'Backend', demo:'https://www.dailystarters.org/', github:'https://github.com/Ezekd0', image:'/dailystarters.png' },
 ];
 
 const Projects = () => {
@@ -33,7 +33,15 @@ const Projects = () => {
           {filtered.map(proj => (
             <motion.div whileHover={{ y: -6 }} key={proj.id} className="bg-secondary rounded-xl overflow-hidden border border-accent/20 hover:border-accent/70 transition-all flex flex-col justify-between">
               <div>
-                <div className="h-40 bg-gradient-to-br from-accent/20 to-navy flex items-center justify-center"><Code size={48} className="text-accent/60" /></div>
+                <div className="h-40 relative overflow-hidden bg-navy flex items-center justify-center">
+                  {proj.image ? (
+                    <img src={proj.image} alt={proj.title} className="w-full h-full object-cover object-top hover:scale-105 transition-all duration-300" />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-navy flex items-center justify-center">
+                      <Code size={48} className="text-accent/60" />
+                    </div>
+                  )}
+                </div>
                 <div className="p-5">
                   <h3 className="text-xl font-bold mb-2">{proj.title}</h3>
                   <p className="text-textMuted text-sm mb-3">{proj.desc}</p>
