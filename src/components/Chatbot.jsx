@@ -49,15 +49,20 @@ const Chatbot = () => {
       scrollToProjects();
       return "Filtering AI projects! See the latest AI bots & assistants in the projects grid.";
     }
-    if (lower.includes('web3') || lower.includes('blockchain') || lower.includes('ibom')) {
+    if (lower.includes('web3') || lower.includes('blockchain') || lower.includes('ibom') || lower.includes('b2trendz') || lower.includes('edimax') || lower.includes('crypto')) {
       setActiveFilter('Web3');
       scrollToProjects();
-      return "Showing Web3 and blockchain projects, including the Ibom Blockchain Xperience! Check the projects section.";
+      return "Showing Web3 and blockchain projects, including the Ibom Blockchain Xperience and B2TRENDZ! Check the projects section.";
     }
     if (lower.includes('thought starters') || lower.includes('dailystarters') || lower.includes('devotion') || lower.includes('bible')) {
       setActiveFilter('Backend');
       scrollToProjects();
       return "Showing the Thought Starters devotion platform! Check the projects section.";
+    }
+    if (lower.includes('kinnex') || lower.includes('investment') || lower.includes('smart investments')) {
+      setActiveFilter('Backend');
+      scrollToProjects();
+      return "Showing the Kinnex Ltd investment platform! Check the projects section.";
     }
     if (lower.includes('resume')) {
       return "You can download Victor's resume from the Hero section (Download Resume button).";

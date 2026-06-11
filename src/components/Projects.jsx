@@ -4,8 +4,8 @@ import { ExternalLink, Github, Code, X, Sparkles } from 'lucide-react';
 import { ProjectFilterContext } from '../App';
 
 const projectsData = [
-  { id:1, title:'AI Customer Support Bot', desc:'Intelligent chatbot with NLP, sentiment analysis', tech:['Python','FastAPI','OpenAI'], category:'AI', demo:'#', github:'https://github.com/Ezekd0' },
-  { id:2, title:'Analytics Dashboard', desc:'Real-time data visualization for business metrics', tech:['Pandas','React','D3'], category:'Data Science', demo:'#', github:'https://github.com/Ezekd0' },
+  { id:1, title:'B2TRENDZ', desc:'A reliable cryptocurrency and gift card exchange platform offering the best trading rates, entertainment blog updates, and events.', tech:['React','Tailwind CSS','Node.js','Web3'], category:'Web3', demo:'https://www.b2trendz.com/', github:'https://github.com/Ezekd0', image:'/b2trendz.png' },
+  { id:2, title:'Kinnex Ltd', desc:'A strategic investment solutions platform offering tailored financial goals, smart asset growth tracker, and expert guidance.', tech:['React','Tailwind CSS','Vite','Chart.js'], category:'Backend', demo:'https://kinnex-rho.vercel.app/', github:'https://github.com/Ezekd0', image:'/kinnex.png' },
   { id:3, title:'Ecom Backend API', desc:'Scalable REST API with authentication and rate limiting', tech:['Django','PostgreSQL','Redis'], category:'Backend', demo:'#', github:'https://github.com/Ezekd0' },
   { id:4, title:'Automated ML Pipeline', desc:'End-to-end model training automation', tech:['Python','Scikit-learn','Airflow'], category:'Automation', demo:'#', github:'https://github.com/Ezekd0' },
   { id:5, title:'Portfolio AI Agent', desc:'Interactive AI assistant integration', tech:['React','LangChain'], category:'AI', demo:'#', github:'https://github.com/Ezekd0' },
