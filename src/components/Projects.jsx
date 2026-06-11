@@ -1,6 +1,6 @@
 import { useContext, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, Code, X, Sparkles } from 'lucide-react';
+import { ExternalLink, Code, X, Sparkles } from 'lucide-react';
 import { ProjectFilterContext } from '../App';
 
 const projectsData = [
