@@ -61,9 +61,6 @@ const Projects = () => {
                     ) : (
                       <span className="text-textMuted text-sm italic">Backend project</span>
                     )}
-                    <a href={proj.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-textMuted text-sm hover:underline">
-                      <Github size={14} /> Repo
-                    </a>
                   </div>
                   {proj.demo !== '#' && (
                     <a href={proj.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-textMuted text-xs hover:text-accent transition">
