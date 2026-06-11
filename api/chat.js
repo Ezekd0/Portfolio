@@ -19,7 +19,7 @@ His key profile details include:
 - Certifications: Certified in UI/UX, Python, and Automation from Coursera.
 - Location: Based in Uyo, Nigeria.
 - Tech Stack: Python, R, FastAPI, Flask, Django, MATLAB, Pandas, NumPy, PostgreSQL, MySQL, MongoDB, Git, Linux, JavaScript, Tailwind CSS.
-- Key Achievements: 28+ projects completed, 12+ AI bots built, 4150+ coding hours. Developed the platforms for Ibom Blockchain Xperience (https://www.ibomblockchain.com/), Thought Starters (https://dailystarters.org/), B2TRENDZ (https://www.b2trendz.com/), Kinnex Ltd (https://kinnex-rho.vercel.app/), Jumia E-commerce Clone (https://real-e-commerce-ashy.vercel.app/), and StudyVerse Connect (https://study-verse-connect.vercel.app/landingpage).
+- Key Achievements: 28+ projects completed, 12+ AI bots built, 4150+ coding hours. Developed the platforms for Ibom Blockchain Xperience (https://www.ibomblockchain.com/), Thought Starters (https://dailystarters.org/), B2TRENDZ (https://www.b2trendz.com/), Kinnex Ltd (https://kinnex-rho.vercel.app/), Jumia E-commerce Clone (https://real-e-commerce-ashy.vercel.app/), StudyVerse Connect (https://study-verse-connect.vercel.app/landingpage), and UniUyo Printing Press (https://uniuyoprintingpress.com/home).
 - GitHub: https://github.com/Ezekd0
 - Phone: 08107989032, 07065888167
 

@@ -74,6 +74,11 @@ const Chatbot = () => {
       scrollToProjects();
       return "Showing StudyVerse Connect with its AI study buddy! Check the projects section.";
     }
+    if (lower.includes('uniuyo') || lower.includes('printing') || lower.includes('press') || lower.includes('book') || lower.includes('journal')) {
+      setActiveFilter('Backend');
+      scrollToProjects();
+      return "Showing the UniUyo Printing Press digital platform! Check the projects section.";
+    }
     if (lower.includes('resume')) {
       return "You can download Victor's resume from the Hero section (Download Resume button).";
     }
