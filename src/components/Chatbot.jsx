@@ -64,6 +64,16 @@ const Chatbot = () => {
       scrollToProjects();
       return "Showing the Kinnex Ltd investment platform! Check the projects section.";
     }
+    if (lower.includes('jumia') || lower.includes('ecommerce') || lower.includes('e-commerce') || lower.includes('shop')) {
+      setActiveFilter('Backend');
+      scrollToProjects();
+      return "Showing the Jumia E-commerce Clone! Check the projects section.";
+    }
+    if (lower.includes('studyverse') || lower.includes('study-verse') || lower.includes('study partner')) {
+      setActiveFilter('AI');
+      scrollToProjects();
+      return "Showing StudyVerse Connect with its AI study buddy! Check the projects section.";
+    }
     if (lower.includes('resume')) {
       return "You can download Victor's resume from the Hero section (Download Resume button).";
     }
